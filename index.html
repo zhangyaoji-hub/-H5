@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 78px;">
+
+<head>
+    <meta charset="utf-8">
+    <title>张耀技&陈玉静的婚礼邀请</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/zf-style.css">
+
+    <link href="css/index.css?id=1" rel="stylesheet" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <style>
+        .imageRotate {
+            width: 32px;
+            height: 32px;
+            right: 12px;
+            top: 12px;
+            opacity: 1;
+            position: absolute;
+            display: block;
+            z-index: 100;
+        }
+
+
+        .welcome_name {
+            /* 这里用字蜘处理你需要的字体 */
+            /* font-family: 'wedding', serif; */
+            font-size: 32px;
+        }
+
+        .welcome_title {
+            /* font-family: 'wedding', serif; */
+            font-size: 26px;
+        }
+
+        .marry {
+            font-size: 24px;
+            top: 20px !important;
+            color: #e92020;
+        }
+
+        .mibile_end {
+            position: absolute;
+            bottom: 8%;
+            left: 20%;
+            color: #FEFEFE;
+        }
+
+        @-webkit-keyframes music_play {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes music_play {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            -webkit-animation: music_play 3s infinite linear;
+        }
+    </style>
+
+    <style>
+        /* 弹幕css */
+        #barrage {
+            overflow: hidden;
+            position: absolute;
+            z-index: 100;
+        }
+
+
+        #barrage li {
+
+            list-style-type: none;
+            background: #000;
+            opacity: 0.6;
+            color: #fff;
+            position: absolute;
+            padding: 1px 4px;
+            display: inline-block;
+            border-radius: 4px;
+            font-size: 12px;
+            height: 22px;
+            line-height: 22px;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <img src="images/loading.gif" alt="">
+    </div>
+    <div id="barrage">
+    </div>
+
+    <div>
+        <!-- xxxx.mp3为show文件夹下的音频文件，自行定义 -->
+        <audio preload autoplay loop id="music_tag" src="show/这一生关于你的风景.mp3"></audio>
+        <img id="music_play" onclick="musicStop()" class="imageRotate rotate" src="show/musicon.png">
+        <img id="music_stop" onclick="musicPlay()" class="imageRotate" src="show/musicoff.png" style="display: none">
+    </div>
+    <div class="swiper-container">
+        <div class="background">
+            <ul id="ul-cir"></ul>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="cover">
+                <div class="imgbox">
+                    <img class="fadein-bg" src="show/bg.jpg" alt="">
+                    <div class="welcome">
+                        <div class="wedding ani marry resize" swiper-animate-effect="zoomIn"
+                            swiper-animate-duration="1s" swiper-animate-delay="1s">
+                            ~~~~我们结婚啦~~~~
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page1">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/1.jpg" alt="">
+                    <div class="circle" style="width: 80px; height: 80px; top: 20px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 100px; height: 100px; top: 220px; right: 35px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">耀眼的人那么多，</p>
+                            <p class="p2">唯独只有你闪到了我。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page2">
+                <div class="imgbox">
+                    <img class="qzin" src="show/img-small/2.jpg" alt="">
+                    <div class="circle" style="width: 80px; height: 80px; top: 20px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">若要相守一生，</p>
+                            <p class="p2">那么非你莫属。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page3">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/3.jpg" alt="">
+                    <div class="circle" style="width: 150px; height: 150px; top: 50px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">说不清为什么爱你，</p>
+                            <p class="p2">但你就是我不愿意爱别人的理由。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page4">
+                <div class="imgbox">
+                    <img class="qzin" src="show/img-small/4.jpg" alt="">
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">你若敢肆无忌惮地宠爱，</p>
+                            <p class="p2">我就敢大张旗鼓地炫耀。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page5">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/5.jpg" alt="">
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">没遇到你之前，</p>
+                            <p class="p2">我，随遇而安；</p>
+                            <p class="p3">遇见你之后，</p>
+                            <p class="p4">我，以你为安。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" id="page6">
+                <div class="imgbox">
+                    <img class="qzin" src="show/img-small/6.jpg" alt="">
+                    <div class="circle" style="width: 80px; height: 80px; top: 20px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 100px; height: 100px; top: 220px; right: 35px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">我能想到最浪漫的事，</p>
+                            <p class="p2">是和你一起慢慢变老。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page7">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/7.jpg" alt="">
+                    <div class="circle" style="width: 150px; height: 150px; top: 50px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <div class="imgfoot">
+                            <p class="p1">你的过去</p>
+                            <p class="p2">我来不及参与；</p>
+                            <p class="p3">你的未来，</p>
+                            <p class="p4">我奉陪到底。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page8">
+                <div class="imgbox">
+                    <img class="qzin" src="show/img-small/8.jpg" alt="">
+                    <div class="circle" style="width: 80px; height: 80px; top: 20px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <img src="show/remark4.png" style="width: 180px">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page9">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/9.jpg" alt="">
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <img src="show/remark3.png" style="width: 180px">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page10">
+                <div class="imgbox">
+                    <img class="qzin" src="show/img-small/10.jpg" alt="">
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <img src="show/remark2.png" style="width: 180px">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page11">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/11.jpg" alt="">
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <img src="show/remark6.png" style="width: 180px">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="page12">
+                <div class="imgbox">
+                    <img class="xzAni" src="show/img-small/12.jpg" alt="">
+                    <div class="circle fast" style="width: 70px; height: 70px; top: 120px; right: 5px;"></div>
+                    <div class="circle" style="width: 80px; height: 80px; top: 110px; left: 5px;"></div>
+                    <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                    <div class="circle" style="width: 110px; height: 110px; bottom: 20px; left: 5px;"></div>
+                    <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+                        swiper-animate-delay="0.5s">
+                        <img src="show/remark4.png" style="width: 180px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" id="pagelast">
+                <div class="imgbox">
+                    <img class="fadein-bg" src="show/lastbg.jpg" alt="">
+                    <div style="display: block;text-align:left;">
+                        <div class="pagelast-address" onclick="GoToMap();">婚礼地址：徐闻县鸿源食庄(木兰大道) </div>
+                        <div class="pagelast-date">婚礼日期：2022.08.08(七月十一，周一) </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="rv-popup" id="rv-popup">
+            <div class="rv-mask">
+            </div>
+            <div class="rv_content ">
+                <img class="rv-head1" src="./images/cat.gif">
+                <img class="rv-head2" src="./images/tiger.gif">
+                <div class="rv-zf">
+                    送祝福
+                </div>
+                <div class="rv-box">
+                    <input type="text" id="username" class="rv-field" maxlength="4" placeholder="您的姓名">
+                    <input type="text" id="zfcontent" class="rv-field" placeholder="您的祝福(限25字内)" maxlength="25">
+
+                    <div class="rv-button" id="" onclick="Send();">
+                        发送祝福
+                    </div>
+                    <img class="rv-close" src="./images/close.png" onclick="CloseBless()">
+                </div>
+            </div>
+        </div>
+        <div class="rv-popup" id="rv-record">
+            <div class="rv-mask">
+            </div>
+            <div class="rv_content ">
+                <div class="rv-zf">
+                    赴宴登记
+                </div>
+                <div class="rv-box">
+                    <span>您的姓名：</span>
+                    <input type="text" id="username" class="rv-field" style="background: none;margin:0 0 2px;"
+                        maxlength="4" placeholder="输入您的姓名">
+                    <p class="p-line"></p>
+                    <span>是否赴宴：</span>
+                    <div class="radio">
+                        <input id="checkType-1" name="checkType" type="radio" value="参加" checked>
+                        <label for="checkType-1" class="radio-label"><span class="radio-label-span">参加</span></label>
+                        <input id="checkType-2" name="checkType" type="radio" value="待定">
+                        <label for="checkType-2" class="radio-label"><span class="radio-label-span">待定</span></label>
+                    </div>
+                    <p class="p-line"></p>
+                    <span>参加人数：</span>
+                    <div class="radio">
+                        <input id="joinNum-1" name="joinNum" type="radio" value="1" checked>
+                        <label for="joinNum-1" class="radio-label"><span class="radio-label-span">1</span></label>
+                        <input id="joinNum-2" name="joinNum" type="radio" value="2">
+                        <label for="joinNum-2" class="radio-label"><span class="radio-label-span">2</span></label>
+                        <input id="joinNum-3" name="joinNum" type="radio" value="3">
+                        <label for="joinNum-3" class="radio-label"><span class="radio-label-span">3</span></label>
+                        <input id="joinNum-4" name="joinNum" type="radio" value="4">
+                        <label for="joinNum-4" class="radio-label"><span class="radio-label-span">4</span></label>
+                    </div>
+                    <p class="p-line"></p>
+                    <div class="rv-button" id="" onclick="PostRecord();CloseBless();">
+                        确定
+                    </div>
+                    <img class="rv-close" src="./images/close.png" onclick="CloseBless()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footinfo">
+        <div class="sendzf" onclick="ShowBless()">留下你的祝福...</div>
+        <div class="itempanel address" onclick="GoToMap();">
+            <img src="images/address.png">
+            <span class="itemtext">场地</span></div>
+        <div class="itempanel join" onclick="ShowRecord()">
+            <img src="images/xiaoxi.png">
+            <span class="itemtext">赴宴</span></div>
+    </div>
+
+    <script>
+
+        function getNews() {
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "/getNews",
+                data: { "time": lastGetTime },
+                success: function (data) {
+
+                },
+                error: function () {
+
+                }
+            });
+        }
+        function people() {
+
+            var submit_people = $('#submit_people');
+            submit_people.attr("disabled", true);
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/friend",// 提交到后端的url
+                data: $('#friendForm').serialize(),
+                success: function (data) {
+
+                },
+                error: function () {
+                    iakit.toast.showCenter('提交故障，请联系新郎~');
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            for (var i = 0; i < 9; i++) {
+                var rand = new Array();//rgb色彩值
+                for (var j = 0; j < 3; j++) {
+                    rand[j] = Math.floor(Math.random() * 26 + 230); // 230 ~ 255
+                }
+                var op = Math.floor(Math.random() * 5 + 2) / 10; //均衡获取rgba的透明度的随机数
+                var left = Math.floor(Math.random() * 100) + "%"; //泡泡随机分布的距离
+                var delay = Math.floor(Math.random() * 10) + "s"; //每个泡泡出现推迟的时间
+                var dur = Math.floor(Math.random() * 10 + 11) + "s"; //泡泡完成一个周期所需要的时间
+                var enlarge = Math.floor(Math.random() * 40 + 30); //泡泡扩大到的宽和高
+
+                $("#ul-cir").append("<li class='li-cir'></li>"); //增加一个泡泡
+                $("#ul-cir li").eq(i).css("background", "rgba(" + rand[0] + "," + rand[1] + "," + rand[2] + "," + op + ")");//选取ul li中匹配的索引顺序为i的元素赋予背景颜色
+                $("#ul-cir li").eq(i).css("border", "rgba(" + rand[0] + "," + rand[1] + "," + rand[2] + "," + 1 + ") 1px solid");//给泡泡加上边框
+                $("#ul-cir li").eq(i).css("left", left); //泡泡出现的距离值
+                $("#ul-cir li").eq(i).css("animation-delay", delay); //泡泡出现推迟的时间
+                $("#ul-cir li").eq(i).css("animation-duration", dur); //泡泡完成一个周期所需要的时间
+                $("#ul-cir li").eq(i).css("width", enlarge).css("height", enlarge); //扩大泡泡
+            }
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+        function musicPlay() {
+            document.getElementById('music_stop').style.display = 'none';
+            document.getElementById('music_play').style.display = '';
+            document.getElementById("music_tag").play();
+        }
+
+        function musicStop() {
+            document.getElementById('music_stop').style.display = '';
+            document.getElementById('music_play').style.display = 'none';
+            document.getElementById("music_tag").pause();
+        }
+
+        // 音乐播放
+        function autoPlayMusic() {
+            // 自动播放音乐效果，解决浏览器或者APP自动播放问题
+            function musicInBrowserHandler() {
+                musicPlay(true);
+                document.body.removeEventListener('touchstart', musicInBrowserHandler);
+            }
+            document.body.addEventListener('touchstart', musicInBrowserHandler);
+
+            // 自动播放音乐效果，0解决微信自动播放问题
+            function musicInWeixinHandler() {
+                musicPlay(true);
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    musicPlay(true);
+                }, false);
+                document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+            }
+            document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+        }
+        autoPlayMusic();
+    </script>
+
+    <script>
+        scaleW = window.innerWidth;
+        scaleH = window.innerHeight;
+        var timer = null;
+        var current = [];//存储当前输入框的内容
+        var newarr = [];//存储每个弹幕距左边框的距离 
+        var piecenum = 0;//块号标记
+        var num = new Array();//数组，用来存储划分每个块的序号
+
+        var words = [{ "id": 1, "text": "游客：祝你们永结同心，百年好合！" }, { "id": 2, "text": "游客：托清风捎去衷心的祝福，让流云奉上真挚的情意" },
+        { "id": 3, "text": "好闺蜜：花好月圆，喜事连连，祝福你们婚姻坚。" }, { "id": 4, "text": "某帅哥：爱情牢不可破！和和美美，白头偕老。" },
+        { "id": 5, "text": "你的兄弟：祝你们永远相爱，携手共度美丽人生。" }, { "id": 6, "text": "游客：百年琴瑟，百年偕老" }];
+
+        function $$(id) {
+            return document.getElementById(id);
+        }
+
+
+        window.onload = function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: 4000,
+                direction: 'vertical',
+                mousewheelControl: true,
+                autoplayDisableOnInteraction: true,//自动轮播
+                loop: false,//是否重复轮播
+                speed: 1000,
+                zoom: true,
+                pagination: '.swiper-pagination',
+                paginationType: 'progress',
+                onInit: function (swiper) {
+                    swiperAnimateCache(swiper);
+                    swiperAnimate(swiper);
+                },
+                onSlideChangeEnd: function (swiper) {
+                    swiperAnimate(swiper);
+                },
+                onTransitionEnd: function (swiper) {
+                    swiperAnimate(swiper);
+                },
+
+                watchSlidesProgress: true,
+
+                onProgress: function (swiper) {
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        var slide = swiper.slides[i];
+                        var progress = slide.progress;
+                        var translate = progress * swiper.height / 4;
+                        var scale = 1 - Math.min(Math.abs(progress * 0.5), 1), es;
+                        slide.style.opacity = 1 - Math.min(Math.abs(progress / 2), 0.5);
+                        es = slide.style;
+                        es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + translate + 'px,-' + translate + 'px) scaleY(' + scale + ')';
+                    }
+                },
+
+                onSetTransition: function (swiper, speed) {
+                    for (var i = 0, es; i < swiper.slides.length; i++) {
+                        es = swiper.slides[i].style;
+                        es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+                    }
+                },
+            });
+
+            //设置弹幕的宽高
+            $$("barrage").style.width = scaleW + 'px';
+            $$("barrage").style.height = (scaleH / 10 * 3) + 'px';
+
+            try {
+                document.getElementById("loading").remove();
+            } catch (e) { }
+
+            for (var i = 0; i < $$("barrage").offsetHeight / 22 - 1; i++) {
+                num.splice(i, 0, i);//将整个显示框划分成多个块，并对每个块进行标号           
+            }
+            clearInterval(timer);//清除定时器
+            for (var i = 0; i < 4; i++) {
+                setTimeout(function () {
+                    var word = words.shift().text;//出队列 
+                    create(word);//创建一个弹幕
+                }, 100 * random(1, 100))//给弹幕随机加一个延迟
+
+            }
+            timer = setInterval(move, 20);//开启定时器
+            setTimeout(function () {
+                $(".footinfo").show();
+            }, 4200);
+        }
+
+        function create(w) {
+
+            var node = document.createElement("li");//创建一个li元素，用来存储弹幕的信息
+            node.innerHTML = w;
+            piecenum += 2;
+            piecenum = piecenum == num.length ? 0 : piecenum;//如果块号大于分块的长度则置0
+            node.style.top = (num[piecenum++] * 22) + "px";//从划分的块中随机选中一块。
+            node.style.left = (scaleW + 100) + "px";
+            $$("barrage").appendChild(node);//插入子节点         
+
+        }
+
+        function move() {
+            var arr = $$("barrage").getElementsByTagName("li");//获取所有的弹幕
+            for (var i = 0; i < arr.length; i++) {
+
+                newarr.push(arr[i].offsetLeft);//将每个弹幕距左边边框的距离分别存储在newarr数组中
+                arr[i].style.left = newarr[i] + "px";//更新距离
+                newarr[i] = newarr[i] - 2;//每次减少2px
+                var length = arr[i].innerHTML.length * 16;//每个字符长度是16px，计算出一个li中的总长度
+                if (newarr[i] + length < 0 && words.length > 0) {
+                    //当弹幕内容到达最左边时，重新在已创建块中找到其中一个块来存放队列中出队的内容
+                    newarr[i] = scaleW + 100;
+                    var w = words.shift().text;//找出出队的内容
+                    if (w) {
+                        arr[i].innerHTML = w;
+                        piecenum += 2;
+                        piecenum = piecenum == num.length ? 0 : piecenum;//如果块号大于分块的长度则置0
+                        arr[i].style.top = (num[piecenum++] * 22) + "px";//从划分的块中随机选中一块。
+                        arr[i].style.left = (scaleW + 100) + "px";
+                    } else {
+                        //如果队列为空，则需要到后台获取最新的数据
+
+                    }
+                }
+
+            }
+        }
+
+        function Send() {
+            //输入款发送弹幕
+            var un = $$("username").value;
+            var zf = $$("zfcontent").value;
+            if (zf.trim() != "") {
+                var value = (un.trim() == "" ? "游客" : un) + "：" + zf.trim();
+                words.unshift({ "id": 0, "text": value });
+                $$("zfcontent").value = "";
+                CloseBless();
+            }
+        }
+
+        //登记
+        function PostRecord() {
+
+
+        }
+
+        function random(m, n) {//随机在m、n之间的整数
+            return Math.round(Math.random() * (n - m)) + m;
+        }
+
+    </script>
+    <script>
+        function CloseBless() {
+            $(".rv-popup").hide();
+        }
+        function ShowBless() {
+            $$("rv-popup").style.display = "flex";
+        }
+        function ShowRecord() {
+            $$("rv-record").style.display = "flex";
+        }
+
+        function GoToMap() {
+
+            var options = {
+
+                destination: {  //导航终点点坐标和名称
+                    latitude: 20.336192, // 纬度，浮点数，范围为90 ~ -90
+                    longitude: 110.179169, // 经度，浮点数，范围为180 ~ -180。
+                    name: '广东省湛江市徐闻县鸿源食庄(木兰大道)', // 位置名
+                    address: '鸿源食庄', // 地址详情说明
+                    scale: 10, // 地图缩放级别,整形值,范围从1~28。默认为最大
+                },
+                // #ifdef MP-WEIXIN
+                mapId: "map",
+                // #endif
+                mode: "drive"  //导航方式 公交：bus驾车：drive（默认）,步行：walk,骑行：bike;
+            }
+            //驾车导航，打开地图直接开启导航，只需要传入options.destination终点信息;
+            //navigation(options, "gcj02")
+            window.open("https://mapapi.qq.com/web/mapComponents/locationMarker/v/index.html?type=0&marker=coord:20.336192,110.179169;coordtype:5;title:广东省湛江市徐闻县来悦酒店&key=QLPBZ-3O6R4-GJDUO-DITBG-UHR7K-E6B2G&referer=hunliji");
+        }
+    </script>
+</body>
+
+</html>
